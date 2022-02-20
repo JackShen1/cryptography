@@ -44,19 +44,19 @@ $ python main.py --decrypt --input-file "data/ciphertext.txt" --output-file "dat
 
 Decrypt text with known key:
 ``` bash
-$ python main.py -d -i "data/ciphertext.txt" -o "data/result.txt -k "spirit"
+$ python main.py -d -i "data/ciphertext.txt" -o "data/result.txt" -k "spirit"
 $ python main.py --decrypt --input-file "data/ciphertext.txt" --output-file "data/result.txt" --key "spirit"
 ```
 
 Decrypt text with known key length:
 ``` bash
-$ python main.py -d -i "data/ciphertext.txt" -o "data/result.txt -l 6
+$ python main.py -d -i "data/ciphertext.txt" -o "data/result.txt" -l 6
 $ python main.py --decrypt --input-file "data/ciphertext.txt" --output-file "data/result.txt" --key-len 6
 ```
 
 Decrypt text with known max key length:
 ``` bash
-$ python main.py -d -i "data/ciphertext.txt" -o "data/result.txt -m 8
+$ python main.py -d -i "data/ciphertext.txt" -o "data/result.txt" -m 8
 $ python main.py --decrypt --input-file "data/ciphertext.txt" --output-file "data/result.txt" --max-key-len 8
 ```
 
