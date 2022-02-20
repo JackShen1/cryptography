@@ -32,7 +32,7 @@ $ python main.py --encrypt --input-file "data/plaintext.txt" --output-file "data
 
 Encrypt text with own key:
 ``` bash
-$ python main.py -e -i "data/plaintext.txt" -o "data/ciphertext.txt -k "spirit"
+$ python main.py -e -i "data/plaintext.txt" -o "data/ciphertext.txt" -k "spirit"
 $ python main.py --encrypt --input-file "data/plaintext.txt" --output-file "data/ciphertext.txt" --key "spirit"
 ```
 
