@@ -37,12 +37,7 @@ def main():
 
             key = find_xor_key(ciphertext, key_len)
 
-        decrypted_text = decrypt(ciphertext=ciphertext, key=key).decode()
-
-        print(f"Key: {key.decode()}\n"
-              f"Part of Decrypted text: {decrypted_text[:50]}")
-
-        out_file.write(decrypted_text)
+        out_file.write(decrypt(ciphertext=ciphertext, key=key).decode())
 
     in_file.close()
     out_file.close()
