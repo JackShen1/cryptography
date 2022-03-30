@@ -1,10 +1,10 @@
-**RS4 Cipher**
+**RC4 Cipher**
 ==================
 
 Annotation
 ----------
 
-This script is designed to encrypt and decrypt text from a file and then save encrypted or decrypted text to a new file. Encryption algorithm - RS4. The script itself can determine keys, if it is not specified. The available arguments for the script are listed in the following paragraph.
+This script is designed to encrypt and decrypt text from a file and then save encrypted or decrypted text to a new file. Encryption algorithm - RC4. The script itself can determine keys, if it is not specified. The available arguments for the script are listed in the following paragraph.
 
 Current options
 ---------------

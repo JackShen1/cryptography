@@ -4,7 +4,7 @@ import sys
 
 def get_arguments():
     parser = argparse.ArgumentParser(
-        description="Script to encrypt/decrypt data with RS4 Cipher."
+        description="Script to encrypt/decrypt data with RC4 Cipher."
     )
 
     method_group = parser.add_mutually_exclusive_group(required=True)
@@ -26,13 +26,13 @@ def get_arguments():
     parser.add_argument("-o", "--output-file", type=str, required=True)
 
     parser.add_argument(
-        "-k1", "--key1", type=str, help="Key1 for the RS4 cipher", required=False
+        "-k1", "--key1", type=str, help="Key1 for the RC4 cipher", required=False
     )
     parser.add_argument(
         "-k2",
         "--key2",
         type=str,
-        help="Key2 for the RS4 cipher",
+        help="Key2 for the RC4 cipher",
         required="--key1" in sys.argv,
     )
 
