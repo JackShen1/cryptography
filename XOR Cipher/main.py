@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import sys
 
-from services.cipher import encrypt, decrypt, find_key_len, find_xor_key
+from services.cipher import decrypt, encrypt, find_key_len, find_xor_key
 from utils.cli import get_arguments
 
 

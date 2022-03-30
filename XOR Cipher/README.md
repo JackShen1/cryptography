@@ -59,4 +59,3 @@ Decrypt text with known max key length:
 $ python main.py -d -i "data/ciphertext.txt" -o "data/result.txt" -m 8
 $ python main.py --decrypt --input-file "data/ciphertext.txt" --output-file "data/result.txt" --max-key-len 8
 ```
-

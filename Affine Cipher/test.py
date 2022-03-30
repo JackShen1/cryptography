@@ -1,7 +1,7 @@
-import matplotlib.pyplot as plt
 import time
 
-from services.cipher import encrypt, get_all_keys, decrypt, find_affine_key
+import matplotlib.pyplot as plt
+from services.cipher import decrypt, encrypt, find_affine_key, get_all_keys
 
 
 def make_plot(fr: int, to: int, ax: list):
@@ -16,7 +16,7 @@ def test_enc_1():
     y = []
     for i in range(2, 500):
         t1 = time.time()
-        encrypt(encrypt('ї' * i, 1234), 1234)
+        encrypt(encrypt("ї" * i, 1234), 1234)
         t2 = time.time()
         y.append(t2 - t1)
     return y
@@ -29,7 +29,7 @@ def test_enc_2():
     res = []
     for i in range(2, len(all_keys), 5):
         t1 = time.time()
-        encrypt(encrypt('ї' * 200, all_keys[i]), all_keys[i])
+        encrypt(encrypt("ї" * 200, all_keys[i]), all_keys[i])
         t2 = time.time()
         res.append(t2 - t1)
     return res
@@ -43,7 +43,7 @@ def test_dec_1():
     res = []
     for i in range(2, 500):
         t1 = time.time()
-        decrypt(decrypt('ї' * i, 1234), 1234)
+        decrypt(decrypt("ї" * i, 1234), 1234)
         t2 = time.time()
         res.append(t2 - t1)
     return res
@@ -56,7 +56,7 @@ def test_dec_2():
     res = []
     for i in range(2, len(all_keys), 5):
         t1 = time.time()
-        decrypt(decrypt('є' * 200, all_keys[i]), all_keys[i])
+        decrypt(decrypt("є" * 200, all_keys[i]), all_keys[i])
         t2 = time.time()
         res.append(t2 - t1)
     return res
@@ -70,7 +70,7 @@ def test_hack():
     res = []
     for i in range(2, 500):
         t1 = time.time()
-        find_affine_key('ї' * i)
+        find_affine_key("ї" * i)
         t2 = time.time()
         res.append(t2 - t1)
     return res

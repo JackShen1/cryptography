@@ -31,7 +31,7 @@ def encrypt(text: str, key: int) -> str:
     k1, k2 = key // SYM_NUM, key % SYM_NUM
     res = [UA_SYMBOLS[(k1 * UA_SYMBOLS.index(i) + k2) % SYM_NUM] for i in text]
 
-    return ''.join(res)
+    return "".join(res)
 
 
 def decrypt(ciphertext: str, key: int) -> str:
@@ -39,4 +39,4 @@ def decrypt(ciphertext: str, key: int) -> str:
     k3 = pow(k1, -1, SYM_NUM)
     res = [UA_SYMBOLS[((UA_SYMBOLS.index(i) - k2) * k3) % SYM_NUM] for i in ciphertext]
 
-    return ''.join(res)
+    return "".join(res)

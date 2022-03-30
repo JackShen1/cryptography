@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import sys
 
-from services.cipher import encrypt, find_affine_key, decrypt, gen_random_key
+from services.cipher import decrypt, encrypt, find_affine_key, gen_random_key
 from utils.cli import get_arguments
 from utils.file import read_docx, write_docx
 

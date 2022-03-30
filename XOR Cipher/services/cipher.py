@@ -1,6 +1,6 @@
 import string
 from collections import Counter
-from random import sample, randint
+from random import randint, sample
 from typing import Optional
 
 
@@ -13,7 +13,9 @@ def count_matches(origin: bytearray, shifted: bytearray) -> float:
     return int(matches / len(origin) * 1000) / 10
 
 
-def delete_repetitions(probable_rep: list[tuple[float, int]]) -> list[tuple[float, int]]:
+def delete_repetitions(
+    probable_rep: list[tuple[float, int]]
+) -> list[tuple[float, int]]:
     probable_rep.sort(key=lambda len_rep: len_rep[1])
     probable_key_lens = [probable_rep[0]]
     for key_len1 in probable_rep[1:]:
@@ -27,7 +29,9 @@ def delete_repetitions(probable_rep: list[tuple[float, int]]) -> list[tuple[floa
     return sorted(probable_key_lens, reverse=True)
 
 
-def find_key_len(ciphertext: bytearray, max_len: Optional[int]) -> list[tuple[float, int]]:
+def find_key_len(
+    ciphertext: bytearray, max_len: Optional[int]
+) -> list[tuple[float, int]]:
     if not max_len:
         max_len = 32
 
@@ -55,7 +59,9 @@ def find_key_len(ciphertext: bytearray, max_len: Optional[int]) -> list[tuple[fl
     return delete_repetitions(probable_key_rep)
 
 
-def find_xor_key(ciphertext: bytearray, key_len: int, most_common_byte: int = 32) -> bytearray:
+def find_xor_key(
+    ciphertext: bytearray, key_len: int, most_common_byte: int = 32
+) -> bytearray:
     key = bytearray([0] * key_len)
     for st_idx in range(key_len):
         keyspace_text = [
@@ -74,4 +80,6 @@ def encrypt(text: str, key: str) -> bytearray:
 
 
 def decrypt(ciphertext: bytearray, key: bytearray) -> bytearray:
-    return bytearray(ciphertext[i] ^ key[i % len(key)] for i, _ in enumerate(ciphertext))
+    return bytearray(
+        ciphertext[i] ^ key[i % len(key)] for i, _ in enumerate(ciphertext)
+    )
